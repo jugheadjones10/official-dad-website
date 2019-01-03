@@ -56,6 +56,7 @@ function main() {
    
    
   	$('a.page-scroll').click(function() {
+        console.log(location.pathname)
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -93,12 +94,12 @@ function main() {
         }
     });
 
-    $(document).mousedown(function (event){
-        var toggle = $(".navbar-collapse").is(":visible");
-        if (toggle) {
-          $(".navbar-collapse").collapse('hide'); 
-        }
-    })
+    // $(document).mousedown(function (event){
+    //     var toggle = $(".navbar-collapse").is(":visible");
+    //     if (toggle) {
+    //       $(".navbar-collapse").collapse('hide'); 
+    //     }
+    // })
 	
   	// Portfolio isotope filter
     $(window).load(function() {
